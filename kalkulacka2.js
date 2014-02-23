@@ -1,25 +1,15 @@
 var otazky = [
-	['"Zasedání parlamentu a vlády bych se účastnil spíše vzácně."', '"Byl bych častým hostem na zasedáních kabinetu."'],
-	['"Amnestii jako prezident nikdy nevyhlásím."', '"Z důvodu přeplněných věznic jsem byl pro amnestii."'],
-	['"Kosovo splnilo požadavky na mezinárodní uznání."', '"Kosovo je teroristická diktatura financovaná narkomafiemi a demokratická země by ji uznat neměla."'],
-	['"Jako občan jsem jednoznačně proti vydávání majetku církvím."', '"Co bylo ukradeno, má se vrátit. I když je to církev."'],
-	['"Nepovažoval bych za užitečné, kdybychom byli závislí na Rusku, pokud jde o jadernou energetiku."', '"Rusko je kulturní součástí euroamerického prostoru a není třeba ho vnímat negativně."'],
-	['"Zvýšení sazby DPH bylo jedním z kroků k nutné rozpočtové stabilizaci."', '"Jsem pro sníženou sazbu DPH na základní potraviny a léky a nebráním se zvýšení DPH na luxusní zboží."'],
-	['"Adopce páry stejného pohlaví mohou fungovat spíše jako nouzové řešení."', '"Jsem pro adopce homosexuálními páry, umožní-li dítěti  život příjemnější než v dětských domovech."'],
-	['"Ano, doporučil bych svým příbuzným spoření v soukromých penzijních fondech."', '"Nedoporučil bych svým příbuzným spoření v soukromých penzijních fondech."'],
-	['"Česko by se nemělo aktivně podílet na záchraně eurozóny a nemělo by přispívat do záchranného fondu."', '"Pokud jde o aktivní pomoc při záchraně eurozóny, jistou formu solidarity bychom měli dodržet."'],
-	['"V Česku nemá být zavedeno ani školné, ani zápisné."', '"Školné na vysokých školách má být zavedeno v potřebné míře."'],
-	['"Důchodovou reformu pokládám za jeden z největších tunelů v dějinách České republiky."', '"Naše důchodová reforma je model, který v zahraničí docela dobře funguje."'],
-	['"Palestinci mají zajisté právo na vlastní stát"', '"Palestinci nemají mít vlastní stát."'],
-	['"Milosti ano, ale vždy bych se je pokusil tak vysvětlit, aby byly důvody každému srozumitelné."', '"Milosti bych jako prezident neuděloval."'],
-	['"Podpořil bych ocenění bratřím Mašínovým."', '"Vyznamenání bratřím Mašínovým bych neudělil."']
-	
+	['"Мы хотим, чтобы люди знали, на какие деньги сегодня живут чиновники и какие доходы они получают…"', '"Нужны молодые перспективные руководители и главные специалисты, способные оживить экономику, финансовую политику, инвестиционную деятельность…"'],
+	['"Огосударствленная церковь - это опасность для истинной веры…"', '"Слава богу, наша церковь не болеет той заразой, которой заболела церковь на Западе…"'],
+	['"Достаточно сильно воздействовала на меня американская литература: Фолкнер, Апдайк, Стейнбек, Хемингуэй…"', '"В современной белорусской литературе не должно быть цензуры или запретных тем, кроме, разумеется, антигуманных и аморальных…"'],
+	['"Я уже не в том возрасте, чтобы стесняться провинциальности…"', '"Я работал в деревне и жил с мужиками…"'],
+	['"В бане, опять же, свой ритуал: у нас есть дежурный по очереди, который назначается по очереди. И вот когда выпадает мне дежурить, то никто больше о том, как там должно быть и что там должно быть, не думает…"', '"Моему сыну даже в бане покоя нет — его информируют, если что-то не так…"']
 ],
 
 kandidati = [	
 //	 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
-	[1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, "Miloš", "Zeman"],
-	[0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, "Karel", "Schwarzenberg"]		
+	[0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, "Uladzimir", "Niakliajeu"],
+	[1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, "Alaksandr", "Lukasenka"]		
 ],
 
 vysledky = [
@@ -122,8 +112,8 @@ function dalsi() {
  				}
  		}
  	}
- 	if (shodaTab.length == 0) {shodaTab = "<li>V ničem.</li>"};
- 	if (neshodaTab.length == 0) {neshodaTab = "<li>Nic.</li>"};
+ 	if (shodaTab.length == 0) {shodaTab = "<li>Nothing.</li>"};
+ 	if (neshodaTab.length == 0) {neshodaTab = "<li>Nothing.</li>"};
  	kandidati[s].push(shodaTab);
  	kandidati[s].push(neshodaTab);
  	kandidati[s].push(neodpovedelTab);
@@ -147,18 +137,17 @@ function dalsi() {
  				console.log(nezodpOtazky);
  			};
  		}*/
- 		var procentShody = parseInt(kandidati[x][kandidati[x].length - 4] * 100 / otazky.length);
- 		if (x == 0 && procentShody != 50 && procentShody != 100) {procentShody++};
+ 		var procentShody = Math.round(kandidati[x][kandidati[x].length - 4] * 100 / otazky.length);
 		var shodliSe = kandidati[x][kandidati[x].length - 3];
  		var neshodliSe = kandidati[x][kandidati[x].length - 2];
  		var odpovidalA = "odpovídal ";
- 		var title = "<h2>" + krestniJmeno + " " + prijmeni + " a jeho názory</h2><h3>V čem byste se shodli:</h3><ul>" + shodliSe + "</ul><h3>Co říká " + krestniJmeno + " " + prijmeni + ", ale vy s tím nesouhlasíte:</h3><ul>" + neshodliSe + "</ul>";	
- 		sirkaSloupce[x] = parseInt(610 / 100 * procentShody);
+ 		var title = "<h2>" + krestniJmeno + " " + prijmeni + " and his opinions</h2><h3>What you would agree on:</h3><ul>" + shodliSe + "</ul><h3>What " + krestniJmeno + " " + prijmeni + " sais, but you disagree:</h3><ul>" + neshodliSe + "</ul>";	
+ 		sirkaSloupce[x] = Math.round(610 / 100 * procentShody);
  		seznamVysledku += "<div class='vysledek' id='v" + (x + 1) + "' title='" + title + "'>" + (x + 1) + ". " + krestniJmeno + " <strong>" + prijmeni + "</strong> " + procentShody + " %</div>";	
  	};
 
 // tabulka s komplet vysledky
-	var kompletVysledky = "<table id = 'tabulka'(><thead><tr><th>VAŠE ODPOVĚDI</th>";
+	var kompletVysledky = "<table id = 'tabulka'(><thead><tr><th>YOUR ANSWERS</th>";
 	for (var m = 0; m < kandidati.length; m++) {
 		kompletVysledky += "<th>" + kandidati[m][kandidati[m].length - 6] + " " + kandidati[m][kandidati[m].length - 5] + "</th>";	
 	}
@@ -184,20 +173,20 @@ function dalsi() {
 
     $("#hr1").width(630);
     $("#moznosti").height("auto");
-    $("#titulek").html("Výsledky: S kým jste se lépe shodli?");
+    $("#titulek").html("Results: Which candidate is better for you");
     $("#leva, #prava, #nebo, .vysvetlivky").remove();
     $("#moznosti").append(seznamVysledku);
-  	$("#moznosti").after("<div id='cudlik'>POROVNEJTE SI VŠECHNY ODPOVĚDI</div>");
+  	$("#moznosti").after("<div id='cudlik'>COMPARE ALL ANSWER</div>");
     $("#moznosti").after("<div id='sdilejte'></div>");
     if (kandidati[0][27] != kandidati[1][27]) {
-    	$("#moznosti").after("<p class='vysvetlivky'>Lepším kandidátem by pro vás byl <strong>" + kandidati[0][25] + " " + kandidati[0][26] + "</strong>.<br>Blahopřejeme! Sdílejte svůj výsledek s přáteli:</p>");
+    	$("#moznosti").after("<p class='vysvetlivky'>The better candidate for you would be <strong>" + kandidati[0][25] + " " + kandidati[0][26] + "</strong>.<br>Congratulations! Share your result with friends:</p>");
     	if (kandidati[0][25] == "Miloš") {   		
     		twtext = "S názory Miloše Zemana se shodnu na " + prvni + " procent. Se Schwarzenbergem na " + druhy + " procent. Co vyšlo vám? ";
     	} else {
     		twtext = "S názory Karla Schwarzenberga se shodnu na " + prvni + " procent. Se Zemanem na " + druhy + " procent. Co vyšlo vám? ";
     	} 
 	} else {
-		$("#moznosti").after("<p class='vysvetlivky'>Nerozhodně! <strong>Karel Schwarzenberg</strong> i <strong>Miloš Zeman</strong> jsou pro vás stejně dobří kandidáti.<br>Blahopřejeme! Sdílejte svůj výsledek s přáteli:</p>");
+		$("#moznosti").after("<p class='vysvetlivky'>It's a draw! Both <strong>Aleksandr Lukasenko</strong> and  <strong>Uladzimir Niakliajeu</strong> Are good for you.<br>Congratulations! Share your result with friends:</p>");
 			twtext = "S Karlem Schwarzenbergem i s Milošem Zemanem se shodnu na 50 procent. Co teď? A co vyšlo vám?";
 	};
  
