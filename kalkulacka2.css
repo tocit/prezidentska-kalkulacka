@@ -1,0 +1,207 @@
+html, body {
+	margin: 0px;
+	padding: 0px
+}
+
+#hlavni {	width: 640px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	-moz-box-shadow: 5px 5px #D3D3D3;
+	-webkit-box-shadow: 5px 5px #D3D3D3;
+	box-shadow: 5px 5px #D3D3D3;
+	position: relative
+}
+
+#titulek { 	padding: 3px;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	background-color: #D73E3A;
+	margin: 5px
+}
+
+.stred {
+	vertical-align: bottom
+}
+
+#moznosti {
+	width: 630px;
+	height: 210px;
+	margin: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0px;
+	position: relative
+}
+
+#leva, #prava {	
+	width: 312.5px;
+	height: 210px;
+	background-color: #C8C8C8;
+	float: left
+	
+}
+
+#prava {
+	margin-left: 5px
+}
+
+#leva:hover, #prava:hover {
+	background-color: #D73E3A;
+	border-width: 2px;
+	border-color: #000000;
+	cursor: pointer;
+}
+
+.varianty {
+	font-size: 24px;
+	font-weight: bolder;
+	text-align: center;
+	margin-top: 20px
+}
+
+#nebo {
+	width: 150px;
+	margin: 0px;
+	padding: 3px;
+	font-size: 24px;
+	background-color: #D73E3A;
+	color: white;
+	text-align: center;
+	position: absolute;
+	left: 240px;
+	bottom: 15px
+}
+
+.hr {
+	background-color: #C8C8C8;
+	height: 2px;
+	width: 630px;
+	margin: 5px;
+	margin-top: 0px
+}
+
+#hr1 {
+	background-color: #D73E3A;
+	height: 6px;
+	margin-bottom: 0px;
+}
+
+
+.vysvetlivky {
+	font-size: 13px;
+	margin: 15px;
+	text-align: center
+}
+
+ol {
+	margin: 0px
+}
+
+::selection {
+	display: none
+}
+
+#logo {
+	margin-left: 255px;
+	margin-bottom: 10px
+}
+
+.vysledek {
+	background-color: #C8C8C8;
+	margin: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size: 14px;
+	white-space: nowrap
+}
+
+.vysledek:hover {
+	background-color: #D73E3A;
+	cursor: crosshair
+}
+
+.prijmeni {
+	text-transform: capitalize;
+}
+
+em {
+	color: #D73E3A;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 125% 
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#cudlik {
+	text-align: center;
+	font-size: 15px;
+	padding: 8px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #D73E3A;
+	border-radius: 4px;
+	width: 200px;
+	margin-left: 220px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	cursor: pointer;
+	-moz-box-shadow: 2px 2px #C8C8C8;
+	-webkit-box-shadow: 2px 2px #C8C8C8;
+	box-shadow: 2px 2px #C8C8C8
+}
+
+#cudlik:hover {
+	-moz-box-shadow: 2px 2px #000000;
+	-webkit-box-shadow: 2px 2px #000000;
+	box-shadow: 2px 2px #000000
+}
+
+table {
+	font-size: 11px;
+	margin: 10px;
+	display: none
+}
+
+td {
+	text-align: center;
+	background-color: #C8C8C8
+}
+
+td.oran {
+	background-color: #D73E3A
+}
+
+td.vase {
+	font-weight: bold
+}
+
+td.ostuda {
+	background-color: #000000;
+	color: #FFFFFF
+}
+
+#fb-like {
+	display: none;
+	float: left;
+	margin-right: 35px;
+	margin-left: 205px
+}
+
+#sdilejte {
+	margin-top: 20px
+}
+
+.twitter-share-button {
+}
+
+a img {
+	border: none
+}
